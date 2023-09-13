@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS beginning</title>
+</head>
+<body>
+    <input type="button" onclick="test()" value="kliknij">
+    <a href="javascript:test()">Kliknij tu</a>
+</body>
+<script>
+    // komunikat błędu
+    // alert("Masz bland");
+
+    //confirm zwraca true lub false
+    // confirm("Are you sure?");
+
+    // alert(confirm("Are you sure?"));
+
+    // prompt zwraca podany przez użytkownika wyraz, który potem można zapisać w postaci zmiennej
+    // prompt("Podaj liczbę","");
+
+    // var a; // zmienne var można zmieniać wartość w środku kodu
+    // let b; // let - raz na kod
+
+    // = przepisywanie
+    // == porwnanie wartosci
+    // === porownanie wartosci i typu zmiennych (sprawdzienia na identyczność)
+
+    // let name = prompt("Podaj imię:","");
+    // alert("Witaj " + name);
+
+    // let name = prompt("Podaj imię","");
+    // let secondName = prompt("Podaj nazwisko");
+    // alert("Witaj " + name + " " + secondName + "!");
+
+    // prosty komunikat, który mnoży swie podane przez użytkownika liczby i wypisuje wartość
+    let number1 = +prompt("Podaj pierwszą liczbę:");
+    let number2 = +prompt("Podaj drugą liczbę:");
+    // alert("Iloczyn liczb " + number1 + " i " + number2 + " wynosi " + number1*number2);
+    // alert("Różnica liczb " + number1 + " i " + number2 + " wynosi " + (number1-number2));
+    // alert("Suma liczb " + number1 + " i " + number2 + " wynosi " + (number1+number2));
+    //                                                                  (number1-+-number2)
+    alert("Iloraz liczb " + number1 + " i " + number2 + " wynosi " + (number1%number2));
+
+    // '/' -- reszta z dzielenia
+    // '%' -- iloraz liczb
+
+
+
+    // FUNKCJE
+    function test()
+    {
+        alert("Witaj");
+        // cialo funkci
+    }
+
+</script>
+</html>
