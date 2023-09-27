@@ -9,27 +9,28 @@
 <body>
     <input type="button" OnClick="test()" value="kliknij">
     <a href="javascript:test()">Kliknij tu</a>
+    <input type="button" OnClick="test2()" value="Iloczyn podanych liczb">
 </body>
 <script lang="javascript">
-    // komunikat błędu
+    // komunikat błędu ---ALERT---
     // alert("Masz bland");
 
-    //confirm zwraca true lub false
+    //confirm zwraca true lub false ---CONFIRM---
     // confirm("Are you sure?");
 
     // alert(confirm("Are you sure?"));
 
-    // prompt zwraca podany przez użytkownika wyraz, który potem można zapisać w postaci zmiennej
+    // prompt zwraca podany przez użytkownika wyraz, który potem można zapisać w postaci zmiennej ---PROMPT---
     // prompt("Podaj liczbę","");
 
-    // var a; // zmienne var można zmieniać wartość w środku kodu
-    // let b; // let - raz na kod
+    // var a; // zmienne var można zmieniać wartość w środku kodu   ---VAR---
+    // let b; // let - raz na kod                                   ---LET---
 
     // = przepisywanie
     // == porwnanie wartosci
     // === porownanie wartosci i typu zmiennych (sprawdzienia na identyczność)
 
-    // let name = prompt("Podaj imię:","");
+    // let name = prompt("Podaj imię:","");         ---PRZEPISYWANIE DO ZMIENNYCH---
     // alert("Witaj " + name);
 
     // let name = prompt("Podaj imię","");
@@ -37,18 +38,19 @@
     // alert("Witaj " + name + " " + secondName + "!");
 
 
+    //                                  ---DZIALANIA ARYTMETYCZNE---
     // prosty komunikat, który mnoży swie podane przez użytkownika liczby i wypisuje wartość
-    let number1 = +prompt("Podaj pierwszą liczbę:");
-    let number2 = +prompt("Podaj drugą liczbę:");
+    //let number1 = +prompt("Podaj pierwszą liczbę:");
+    //let number2 = +prompt("Podaj drugą liczbę:");
     
     // Iloczyn liczb z warunkiem, że podane przez użytkownika liczby są liczbami
-    let wynik = (number1 * number2)? number1 * number2: number1 * number2; // ????????????????????
-    let method = (isNaN(wynik))?
-    "Wprowadź tylko liczby":
-    "Iloczyn liczb " + number1 + " i " + number2 + " wynosi " + wynik;
-    alert(method);
+    // let wynik = (number1 * number2)? number1 * number2: number1 * number2; // ????????????????????
+    // let method = (isNaN(wynik))?
+    // "Wprowadź tylko liczby":
+    // "Iloczyn liczb " + number1 + " i " + number2 + " wynosi " + wynik;
+    // alert(method);
 
-    // INNY SPOSÓB
+    // INNY SPOSÓB                                                      ---WARUNEK IF ELSE---
     // if (isNaN(number1) || isNaN(number2)) {
     //     alert("Not a number!");
     // }
@@ -62,6 +64,7 @@
         // '/' -- reszta z dzielenia
         // '%' -- iloraz liczb, modulo
     // }
+
 
 
     // FUNKCJE
