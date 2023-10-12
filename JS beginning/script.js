@@ -83,3 +83,14 @@ do {
   result = result + warunek;
 } while (warunek < 5);
 alert(result);
+
+//                              --- Sprawdzenie czy liczba PIERWSZA ---
+function czy_pierwsza() {    
+    let liczba = prompt("Podaj liczbę, a ja sprawdzę, czy jest ona pierwszą","");
+    for (i=2;i<=Math.sqrt(liczba);i++) {
+        if (liczba % i == 0) {
+            return alert("Nie jest liczbą pierwszą!");
+        }
+    }
+    return alert("Liczba pierwsza");
+}
