@@ -24,6 +24,17 @@ document.write("<h1>Tytuł strony</h1> <b>Tekst wyświetlany przez document.writ
 // let znak = prompt("Podaj znak: ","");
 // alert(znak.charCodeAt(0));
 
+function logowanie() {
+    let login = prompt("Podaj login:");
+    let password = prompt("Podaj hasło:");
+    let haslo = password.charCodeAt(0);
+    if (login == "admin" && haslo == 56) {
+        document.write("<body bgcolor='#AAFFAA'><h1>zalogowany</h1></body>")
+    }
+    else {
+        document.write("<body bgcolor='#FF5555'><h1>Nieprawidłowe login lub hasło</h1></body>");
+    }
+}
 // let login = prompt("Podaj login:");
 // let password = prompt("Podaj hasło:");
 // let haslo = password.charCodeAt(0);
@@ -33,6 +44,7 @@ document.write("<h1>Tytuł strony</h1> <b>Tekst wyświetlany przez document.writ
 // else {
 //     document.write("<body bgcolor='#FF5555'><h1>Nieprawidłowe login lub hasło</h1></body>");
 // }
+
 
 //                                          --- SWITCH ---
 //                  --- W zaleznosci od podanej wartosci wykonuje rozne polecenia ---
@@ -55,7 +67,7 @@ for (i=1;i<=10;i++)
 {
     v +=i+"\n";
 }
-alert(v);
+// alert(v);
 
 let pom = "";
 for (i = 1; i <= 10; i++)
@@ -82,7 +94,7 @@ do {
     warunek = warunek + 1;
   result = result + warunek;
 } while (warunek < 5);
-alert(result);
+// alert(result);
 
 //                              --- Sprawdzenie czy liczba PIERWSZA ---
 function czy_pierwsza() {    

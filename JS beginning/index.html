@@ -7,6 +7,7 @@
     <script src="/script.js"></script>
 </head>
 <body>
+    <input type="button" OnClick="logowanie()" value="Zaloguj się">
     <br>
     <input type="button" OnClick="test()" value="kliknij">
     <a href="javascript:test()">Kliknij tu</a>
@@ -14,10 +15,10 @@
     <input type="button" OnClick="czy_pierwsza()" value="sprawdzić czy liczba pierwsza">
 </body>
 <script lang="javascript">
-    // komunikat błędu ---ALERT---
+    // komunikat błędu                              ---ALERT---
     // alert("Masz bland");
 
-    //confirm zwraca true lub false ---CONFIRM---
+    //confirm zwraca true lub false                 ---CONFIRM---
     // confirm("Are you sure?");
 
     // alert(confirm("Are you sure?"));
@@ -25,14 +26,17 @@
     // prompt zwraca podany przez użytkownika wyraz, który potem można zapisać w postaci zmiennej ---PROMPT---
     // prompt("Podaj liczbę","");
 
-    // var a; // zmienne var można zmieniać wartość w środku kodu   ---VAR---
-    // let b; // let - raz na kod                                   ---LET---
+    //                                          --- VAR, LET and CONST ---
+    // var a; // zmienna VAR jest dostępna w obrębie całej funkcji, w której została utworzona. Domyślnie ma wartość UNDEFINED, jeśi nie została przypisana inna wartość. 
+    // let b; // zmienna LET jest dostępna jedynie w obrębie bloku, w którym została utworzona oraz we wszystkich blokach wewnątrz go. Daje błąd "ReferenceError" zamiast undefined, jeśli zażądać zmiennej LET bez wcześniejszego przypisania jej wartości.
+    // const c; // Zmienna CONST jest stała.
 
     // = przepisywanie
     // == porwnanie wartosci
     // === porownanie wartosci i typu zmiennych (sprawdzienia na identyczność)
 
-    // let name = prompt("Podaj imię:","");         ---PRZEPISYWANIE DO ZMIENNYCH---
+    //                                ---PRZEPISYWANIE DO ZMIENNYCH---
+    // let name = prompt("Podaj imię:","");
     // alert("Witaj " + name);
 
     // let name = prompt("Podaj imię","");
@@ -53,6 +57,7 @@
     // alert(method);
 
     // INNY SPOSÓB                                                      ---WARUNEK IF ELSE---
+    // isNaN() - funkcja if "is Not a Number"
     // if (isNaN(number1) || isNaN(number2)) {
     //     alert("Not a number!");
     // }
