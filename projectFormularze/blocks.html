@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="block" id="block1">
+            <form>
+                Liczymy pole prostokąta:
+                <br>
+                Podaj bok A
+                <input type="text" name="name_pole1" id="pole1">
+                <br>
+                <br>
+                Podaj bok B
+                <input type="text" name="name_pole2" id="pole2">
+                <input type="button" value="oblicz" onClick="formularz()">
+            </form>
+        </div>
+        <div class="block" id="block2">
+            <span id="wynik"></span>
+        </div>
+    </main>
+</body>
+<script>
+    function formularz() {
+        let number1 = document.getElementById("pole1").value;
+        let number2 = document.getElementById("pole2").value;
+        number1 =  parseFloat(number1);
+        number2 =  parseFloat(number2);
+
+        var iloczyn = number1 * number2;
+        document.getElementById("wynik").innerHTML = iloczyn;
+    }
+</script>
+</html>

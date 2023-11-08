@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pobieranie z formularza</title>
+</head>
+<body>
+    
+    <form>
+        Liczymy pole prostokąta:
+        <br>
+        Podaj bok A
+        <input type="text" name="name_pole1" id="pole1">
+        <br>
+        <br>
+        Podaj bok B
+        <input type="text" name="name_pole2" id="pole2">
+        <input type="button" value="oblicz" onClick="formularz()">
+    </form>
+</body>
+<script>
+    function formularz() {
+        let bok1 = document.getElementById("pole1").value;
+        let bok2 = document.getElementById("pole2").value;
+        document.write("Pole prostokąta = " + (bok1*bok2));
+    }
+</script>
+</html>

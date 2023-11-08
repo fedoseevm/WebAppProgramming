@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+}
+
+main {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+}
+
+.block {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#block1 {
+    background-color: cornflowerblue;
+    color: white;
+    text-shadow: -2px 2px 1px black;
+}
+
+#block2 {
+    background-color: coral;
+    font-size: 64px;
+    color: white;
+    text-shadow: -2px 2px 1px black;}
