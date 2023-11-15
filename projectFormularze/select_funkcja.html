@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECT</title>
+</head>
+<body>
+    <form>Wybierz ssaka: <br>
+        <select id="ssaki">
+            <option value="kot">kot</option>
+            <option value="jeż">jeż</option>
+            <option value="ryś">ryś</option>
+            <option value="koń">koń</option>
+        </select>
+        <input type="button" value="wyślij" onclick="formularz()">
+    </form>
+</body>
+<script>
+    function formularz()
+    {
+        var s = document.getElementById("ssaki");
+        alert('Value przechowuje wartość: ' + s.value);
+        alert('selectedIndex zwraca wartość: ' + s.selectedIndex);
+        alert('length zwraca wartość: ' + s.length);
+
+    }
+</script>
+</html>
