@@ -19,13 +19,13 @@ main {
     font-weight: bold;
 }
 
-#block1 {
+#block-left {
     background-color: cornflowerblue;
     color: white;
     text-shadow: -2px 2px 1px black;
 }
 
-#block2 {
+#block-right {
     background-color: coral;
     font-size: 64px;
     color: white;

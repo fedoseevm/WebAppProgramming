@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change page color</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="block" id="block-left">
+            <form>
+                Podaj color w języku angielskim
+                <br>
+                <input type="text" placeholder="color" name="name_pole1" id="colorInput" oninput="changeColor()">
+                <!-- <input type="button" value="zmień kolor" onClick="changeColor()"> -->
+            </form>
+        </div>
+        <div class="block" id="block-right">
+
+        </div>
+    </main>
+</body>
+<script>
+    function changeColor() {
+        let kolor = document.getElementById("colorInput").value;
+        document.getElementById("block-right").style.backgroundColor = kolor;
+    }
+</script>
+</html>
