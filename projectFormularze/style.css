@@ -20,13 +20,15 @@ main {
 }
 
 #block-left {
-    background-color: cornflowerblue;
+    background-color: rgb(21, 72, 167);
     color: white;
     text-shadow: -2px 2px 1px black;
+    align-self: self-end;
 }
 
 #block-right {
-    background-color: coral;
-    font-size: 64px;
+    background-color: rgb(255, 68, 0);
+    font-size: 48px;
     color: white;
-    text-shadow: -2px 2px 1px black;}
+    text-shadow: -2px 2px 1px black;
+}

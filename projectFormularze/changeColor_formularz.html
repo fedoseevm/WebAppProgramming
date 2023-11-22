@@ -14,10 +14,15 @@
                 <br>
                 <input type="text" placeholder="color" name="name_pole1" id="colorInput" oninput="changeColor()">
                 <!-- <input type="button" value="zmień kolor" onClick="changeColor()"> -->
+                <input type="button" value="a" onClick="lowerCase()">
+                <input type="button" value="A" onClick="upperCase()">
+                <br>
+                <input type="text" placeholder="czcionka" id="fontSizeInput">
+                <input type="button" value="zmień rozmiar czcionki" onClick="changeFontSize()">
             </form>
         </div>
         <div class="block" id="block-right">
-
+            <p>Lorem ipsum</p>
         </div>
     </main>
 </body>
@@ -25,6 +30,17 @@
     function changeColor() {
         let kolor = document.getElementById("colorInput").value;
         document.getElementById("block-right").style.backgroundColor = kolor;
+    }
+    function lowerCase() {
+        document.getElementById("block-right").style.textTransform = "lowercase";
+        // document.getElementById("block-left").style.textTransform = "capitalize";
+    }
+    function upperCase() {
+        document.getElementById("block-right").style.textTransform = "uppercase";
+    }
+    function changeFontSize() {
+        let rozmiar_czcionki = document.getElementById("fontSizeInput").value;
+        document.getElementById("block-right").style.fontSize = rozmiar_czcionki + "px";
     }
 </script>
 </html>
