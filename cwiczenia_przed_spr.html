@@ -63,8 +63,8 @@
         }
     }
     function whichIsGreaterOf2() {
-        let liczba8_1 = document.getElementById("input8.1").value;
-        let liczba8_2 = document.getElementById("input8.2").value;
+        let liczba8_1 = parseFloat(document.getElementById("input8.1").value);
+        let liczba8_2 = parseFloat(document.getElementById("input8.2").value);
         if (isNaN(liczba8_1) || isNaN(liczba8_2)) {
             alert("Podane wartości muszą być liczbami. Spróbuj ponownie");
         }
@@ -98,17 +98,17 @@
         }
     }
     function whichIsGreaterOf3() {
-        let liczba10_1 = document.getElementById("input10.1").value;
-        let liczba10_2 = document.getElementById("input10.2").value;
-        let liczba10_3 = document.getElementById("input10.3").value;
+        let liczba10_1 = parseFloat(document.getElementById("input10.1").value);
+        let liczba10_2 = parseFloat(document.getElementById("input10.2").value);
+        let liczba10_3 = parseFloat(document.getElementById("input10.3").value);
         if (isNaN(liczba10_1) || isNaN(liczba10_2) || isNaN(liczba10_3)) {
             alert("Podane wartości muszą być liczbami. Spróbuj ponownie");
         }
         else {
             const T = [liczba10_1, liczba10_2, liczba10_3];
-            let i,j,temp;
-            for (i = T.length - 1; i >= 0; i--) {
-                for (j = 0; j < i; j++) {
+            let temp;
+            for (let i = T.length - 1; i >= 0; i--) {
+                for (let j = 0; j < i; j++) {
                     if (T[j + 1] < T[j]) {
                         temp = T[j];
                         T[j] = T[j + 1];
@@ -116,19 +116,27 @@
                     }
                 }
             }
+
+            // SORTOWANIE za pomocą metody Array.sort()
+            //T.sort(function(a, b) {return a - b})
             let wynik = "";
             for (i = T.length - 1; i >= 0; i--) {
                 wynik += T[i] + " ";
             }
             alert(wynik);
+
+            
         }
     }
     function Calculator() {
-        let liczba13_1 = document.getElementById("input13.1").value;
-        let liczba13_2 = document.getElementById("input13.2").value;
+        let liczba13_1 = parseFloat(document.getElementById("input13.1").value);
+        let liczba13_2 = parseFloat(document.getElementById("input13.2").value);
         let dzialanie = document.getElementById("select_13").value;
         if (isNaN(liczba13_1) || isNaN(liczba13_2)) {
             alert("Podane wartości muszą być liczbami. Spróbuj ponownie");
+        }
+        else if (liczba13_2 == 0 && dzialanie == "/") {
+            alert("Nie można dzielić przez 0!");
         }
         else {
             let wynik;
