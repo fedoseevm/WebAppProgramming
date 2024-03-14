@@ -1,0 +1,75 @@
+// PROSTY
+-- PIŁKA --
+onClipEvent(enterFrame)
+{ 
+	_root.ball._y+=10;
+	if(_root.flor.hitTest(_root.ball)){
+		_root.ball._y-=50;
+	}
+}
+
+
+-- PODŁOGA --
+onClipEvent(enterFrame)
+{
+	if(Key.isDown(Key.LEFT)){
+		_root.flor._x-=15;
+	}
+	if(Key.isDown(Key.RIGHT)){
+		_root.flor._x+=15;
+	}
+}
+
+// ZAAWANSOWANY
+-- PIŁKA --
+onClipEvent(enterFrame)
+{ 
+	var speed:int = 10;
+	var score:int = 0;
+	var rand:int = Math.floor((Math.random() * 25)) + 1;
+	var dir:bool = true;
+	if(!_root.floor.hitTest(_root.ball)) 
+	{
+		this._y += speed;
+		if (dir) 
+		{
+			this._x -= rand;
+		}
+		else 
+		{
+			this._x += rand;
+		}
+	}
+	else
+	{
+		dir = !dir;
+		this._y -= 50; 
+		speed = -50;
+		rand = Math.floor((Math.random() * 25)) + 1;
+		score += 1;
+	}
+	speed += 5;
+}
+
+
+-- PODŁOGA --
+onClipEvent(enterFrame)
+{
+	var speed:int = 15;
+	if(Key.isDown(Key.SHIFT))
+	{
+		speed = 30;
+	}
+	else
+	{
+		speed = 15;
+	}
+	if(Key.isDown(Key.LEFT))
+	{
+		this._x -= speed;
+	}
+	if(Key.isDown(Key.RIGHT))
+	{
+		this._x += speed;
+	}
+}
