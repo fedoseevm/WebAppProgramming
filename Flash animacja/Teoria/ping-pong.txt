@@ -1,0 +1,78 @@
+-- PIŁKA --
+onClipEvent(enterFrame)
+{ 
+  	var speed:int = 15;
+	speed = 10;
+	var angle:int = 5;
+	angle = 2;
+	var rand:int = Math.floor((Math.random() * 25)) + 1;
+  	var dir_R:bool = false;
+  
+	if (dir_R)
+	{
+		this._x += speed;
+		this._y += angle;
+	}
+	else
+	{
+		this._x -= speed;
+		this._y += angle;
+	}
+
+	if(_root.platformR.hitTest(_root.ball))
+	{
+		dir_R = false;
+		if(angle > 0)
+		{
+			angle = -1 * angle;
+		}
+		else
+		{
+			angle = -1 * angle;
+		}
+	}
+	if(_root.platformL.hitTest(_root.ball))
+	{
+		dir_R = true;
+		if(angle > 0)
+		{
+			angle = -1 * angle;
+		}
+		else
+		{
+			angle = -1 * angle;
+		}
+	}
+}
+
+-- PLATFORM L --
+onClipEvent(enterFrame)
+{
+	var speed:int;
+	speed = 25;
+	if(Key.isDown(Key.SHIFT))
+	{
+		this._y -= speed;
+	}
+	if(Key.isDown(Key.CONTROL))
+	{
+		this._y += speed;
+	}
+}
+
+-- PLATFROM R--
+onClipEvent(enterFrame)
+{
+	var speed:int;
+	speed = 25;
+	if(Key.isDown(Key.UP))
+	{
+		this._y -= speed;
+	}
+	if(Key.isDown(Key.DOWN))
+	{
+		this._y += speed;
+	}
+}
+
+# https://ebookpoint.pl/pobierz-fragment/flcs5i/pdf
