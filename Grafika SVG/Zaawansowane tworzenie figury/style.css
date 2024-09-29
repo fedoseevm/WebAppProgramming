@@ -1,0 +1,28 @@
+body {
+    display: inline-flex;
+    margin: unset;
+    width: 100%;
+}
+
+.block {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+form {
+    display: inherit;
+    flex-direction: inherit;
+    gap: 20px;
+}
+
+#leftBlock {
+    background-color: black;
+}
+
+#rightBlock {
+    background-color: grey;
+}
