@@ -1,5 +1,6 @@
 let newY = 0;
 let rotateAngle = 0;
+let scale = 1;
 
 function DrawFigure() {
     const shape = document.getElementById('shape').value;
@@ -36,6 +37,7 @@ function DrawFigure() {
     // Remove "disabled" attributes from moveButton and rotateButton
     document.getElementById('moveButton').removeAttribute('disabled');
     document.getElementById('rotateButton').removeAttribute('disabled');
+    document.getElementById('scaleButton').removeAttribute('disabled');
 }
 
 function MoveFigure() {
@@ -48,11 +50,18 @@ function RotateFigure() {
     Transform();
 }
 
+function ScaleFigure() {
+    scale -= 0.1;
+    Transform();
+}
+
 function Transform() {
     const figure = document.getElementById('figure');
-    figure.setAttribute('transform', `translate(0, ${newY}) rotate(${rotateAngle} 50 50)`);
+    figure.setAttribute('transform', `translate(0, ${newY}) rotate(${rotateAngle} 50 50) scale(${scale})`);
 
     // The translate(<x> [<y>]) transform function moves the object by x and y. If y is not provided, it is assumed to be 0
 
     // The rotate(<a> [<x> <y>]) transform function specifies a rotation by a degrees about a given point. If optional parameters x and y are not supplied, the rotation is about the origin of the current user coordinate system. If optional parameters x and y are supplied, the rotation is about the point (x, y)
+
+    // The scale(<x> [<y>]) transform function specifies a scale operation by x and y. If y is not provided, it is assumed to be equal to x
 }
