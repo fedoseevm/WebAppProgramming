@@ -10,17 +10,17 @@
 <body>
     <div class="block" id="leftBlock">
         <form action="">
-            <label for="#shape">Figure: </label>
+            <label for="shape">Figure: </label>
             <select name="" id="shape">
                 <option value="rect">Rectangle</option>
                 <option value="circle">Circle</option>
             </select>
-            <label for="#color">Color: </label>
+            <label for="color">Color: </label>
             <select name="" id="color">
                 <option value="red">Red</option>
                 <option value="blue">Blue</option>
             </select>
-            <label for="#size">Size: </label>
+            <label for="size">Size: </label>
             <select name="" id="size">
                 <option value="small">Small</option>
                 <option value="big">Big</option>
@@ -28,6 +28,7 @@
             <input type="button" value="Create" onClick="DrawFigure()">
             <input type="button" value="Move down" id="moveButton" onClick="MoveFigure()" disabled>
             <input type="button" value="Rotate" id="rotateButton" onClick="RotateFigure()" disabled>
+            <input type="button" value="Scale down" id="scaleButton" onClick="ScaleFigure()" disabled>
         </form>
     </div>
     <div class="block" id="rightBlock">
