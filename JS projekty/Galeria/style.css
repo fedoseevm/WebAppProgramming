@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    margin: 1.5vh;
+}
+
+#informacje {
+    font-size: 24px;
+}
+
+#ladowanie {
+    display: block;
+    position: absolute;
+    top: 0;
+    _top: 50%; /* IE */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('loading.gif') no-repeat center center;
+}
+ 
+#zdjecie, #miniaturki {
+    margin: 2vh;
+    width: 800px;
+    position: relative;
+}
+ 
+#miniaturki img {
+    width: 100px; 
+    height: 100px; 
+    margin: 0 0.5vw 0 0.5vw;
+    object-fit: cover; 
+    cursor: pointer;
+    border: 2px solid black;
+}
