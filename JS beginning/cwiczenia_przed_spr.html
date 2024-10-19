@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Zadanie 7
+    <input type="text" placeholder="podaj liczbę" id="input7">
+    <input type="button" value="czy parzysta" onClick="ifPrime()">
+    <br>
+    <br>
+    Zadanie 8
+    <input type="text" placeholder="Liczba 1" id="input8.1">
+    <input type="text" placeholder="Liczba 2" id="input8.2">
+    <input type="button" value="Ktora liczba większa" onClick="whichIsGreaterOf2()">
+    <br>
+    <br>
+    Zadanie 9 (Nie dokończone!)
+    <input type="text" placeholder="Liczba 1" id="input9.1">
+    <input type="text" placeholder="Liczba 2" id="input9.2">
+    <input type="text" placeholder="Liczba 3" id="input9.3">
+    <input type="text" placeholder="Liczba 4" id="input9.4">
+    <input type="button" value="Ktora liczba większa" onClick="whichIsGreaterOf4()">
+    <br>
+    <br>
+    Zadanie 10
+    <input type="text" placeholder="Liczba 1" id="input10.1">
+    <input type="text" placeholder="Liczba 2" id="input10.2">
+    <input type="text" placeholder="Liczba 3" id="input10.3">
+    <input type="button" value="Ktora liczba większa v2" onClick="whichIsGreaterOf3()">
+    <br>
+    <br>
+    Zadanie 13
+    <input type="text" placeholder="Liczba 1" id="input13.1">
+    <select id="select_13">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" placeholder="Liczba 2" id="input13.2">
+    <input type="button" value="Calculate" onClick="Calculator()">
+    <br>
+    <br>
+    Zadanie 16
+
+</body>
+<script>
+    function ifPrime() {
+        let liczba7 = document.getElementById("input7").value;
+        if (isNaN(liczba7)) {
+            alert("Podana wartość musi być liczbą. Spróbuj ponownie");
+        }
+        else {
+            if (liczba7 % 2 == 0) {
+                alert("Liczba parzysta");
+            }
+            else {
+                alert("Liczba nieparzysta");
+            }
+        }
+    }
+    function whichIsGreaterOf2() {
+        let liczba8_1 = parseFloat(document.getElementById("input8.1").value);
+        let liczba8_2 = parseFloat(document.getElementById("input8.2").value);
+        if (isNaN(liczba8_1) || isNaN(liczba8_2)) {
+            alert("Podane wartości muszą być liczbami. Spróbuj ponownie");
+        }
+        else {
+            if (liczba8_1 > liczba8_2) {
+                alert("liczba 1 > liczba 2");
+            }
+            else if (liczba8_1 < liczba8_2) {
+                alert("liczba 1 < liczba 2");
+            }
+            else {
+                alert("liczba 1 = Liczba 2");
+            }
+        }
+    }
+    function whichIsGreaterOf4() {
+        let liczba9_1 = document.getElementById("input9.1").value;
+        let liczba9_2 = document.getElementById("input9.2").value;
+        let liczba9_3 = document.getElementById("input9.3").value;
+        let liczba9_4 = document.getElementById("input9.4").value;
+        if (isNaN(liczba9_1) || isNaN(liczba9_2) || isNaN(liczba9_3) || isNaN(liczba9_4)) {
+            alert("Podane wartości muszą być liczbami. Spróbuj ponownie");
+        }
+        else {
+            if (liczba9_1 > liczba9_2 && liczba9_1 > liczba9_3 && liczba9_4) {
+                alert("Liczba 1 : " + liczba9_1);
+            }
+            else if (liczba9_2 > liczba9_1) {
+                // i tak dalej
+            }
+        }
+    }
+    function whichIsGreaterOf3() {
+        let liczba10_1 = parseFloat(document.getElementById("input10.1").value);
+        let liczba10_2 = parseFloat(document.getElementById("input10.2").value);
+        let liczba10_3 = parseFloat(document.getElementById("input10.3").value);
+        if (isNaN(liczba10_1) || isNaN(liczba10_2) || isNaN(liczba10_3)) {
+            alert("Podane wartości muszą być liczbami. Spróbuj ponownie");
+        }
+        else {
+            const T = [liczba10_1, liczba10_2, liczba10_3];
+            let temp;
+            for (let i = T.length - 1; i >= 0; i--) {
+                for (let j = 0; j < i; j++) {
+                    if (T[j + 1] < T[j]) {
+                        temp = T[j];
+                        T[j] = T[j + 1];
+                        T[j + 1] = temp;
+                    }
+                }
+            }
+
+            // SORTOWANIE za pomocą metody Array.sort()
+            //T.sort(function(a, b) {return a - b})
+            let wynik = "";
+            for (i = T.length - 1; i >= 0; i--) {
+                wynik += T[i] + " ";
+            }
+            alert(wynik);
+
+            
+        }
+    }
+    function Calculator() {
+        let liczba13_1 = parseFloat(document.getElementById("input13.1").value);
+        let liczba13_2 = parseFloat(document.getElementById("input13.2").value);
+        let dzialanie = document.getElementById("select_13").value;
+        if (isNaN(liczba13_1) || isNaN(liczba13_2)) {
+            alert("Podane wartości muszą być liczbami. Spróbuj ponownie");
+        }
+        else if (liczba13_2 == 0 && dzialanie == "/") {
+            alert("Nie można dzielić przez 0!");
+        }
+        else {
+            let wynik;
+            switch (dzialanie) {
+                case "+":
+                    alert(liczba13_1 + " + " + liczba13_2 + " = " + (liczba13_1 -+- liczba13_2))
+                    break;
+                case "-":
+                    alert(liczba13_1 + " - " + liczba13_2 + " = " + (liczba13_1 - liczba13_2))
+                    break;
+                case "*":
+                    alert(liczba13_1 + " * " + liczba13_2 + " = " + (liczba13_1 * liczba13_2))
+                    break;
+                case "/":
+                    alert(liczba13_1 + " / " + liczba13_2 + " = " + (liczba13_1 / liczba13_2))
+                    break;
+            }
+        }
+    }
+</script>
+</html>
