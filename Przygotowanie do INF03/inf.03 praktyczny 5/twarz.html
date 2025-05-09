@@ -25,23 +25,41 @@
         <h1>Usługi kosmetyczne</h1>
 
     </section>
-    <section class="lewy" id="lewy2">
-        <img src="obraz1.jpg" alt="Personel">
-    </section>
     <section class="prawy" id="prawy2">
         <h3>Kalkulator ceny wizyty</h3>
-        <form action="">
-            <input type="checkbox" name="" id="peeling"><label for="peeling">Peeling</label>
+        <form action="" id="uslugi">
+            <input type="checkbox" name="" id="peeling" value="45"><label for="peeling">Peeling</label>
             <br>
-            <input type="checkbox" name="" id="maska"><label for="maska">Maska</label>
+            <input type="checkbox" name="" id="maska" value="30"><label for="maska">Maska</label>
             <br>
-            <input type="checkbox" name="" id="masaz_twarzy"><label for="masaz_twarzy">Masaż twarzy</label>
+            <input type="checkbox" name="" id="masaz_twarzy" value="20"><label for="masaz_twarzy">Masaż twarzy</label>
             <br>
-            <input type="checkbox" name="" id="makijaz"><label for="makijaz">Makijaż</label>
+            <input type="checkbox" name="" id="makijaz" value="50"><label for="makijaz">Makijaż</label>
+            <br>
+            <input type="button" value="Oblicz cenę" onClick="oblicz()">
         </form>
+        <p id="wynik" style="display: none">AVDFSDF</p>
+    </section>
+    <section class="lewy" id="lewy2">
+        <img src="obraz1.jpg" alt="Personel">
     </section>
     <footer>
         <p>Autor: fedoseevm</p>
     </footer>
 </body>
+<script lang="js">
+    function oblicz() {
+        let uslugi = document.getElementById('uslugi');
+        let suma = 0;
+        for (i = 0; i <= 4; i++) {
+            if (uslugi[i].checked) {
+                suma += Number(uslugi[i].value);
+            }
+        }
+
+        let wynik =  document.getElementById('wynik');
+        wynik.style.display = "block";
+        wynik.innerHTML = "Cena zabiegów: " + suma;
+    }
+</script>
 </html>
